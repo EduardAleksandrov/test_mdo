@@ -7,22 +7,19 @@ project(SimpleHttpServer)
 set(CMAKE_C_STANDARD 99)
 
 # COPY FILES START
-# Specify the source files you want to copy
-set(SOURCE_FILES
-    ${CMAKE_SOURCE_DIR}/files/file1.txt
-    ${CMAKE_SOURCE_DIR}/files/file2.html
-    ${CMAKE_SOURCE_DIR}/files/file3.json)
+# Specify the source directory you want to copy
+set(SOURCE_DIR ${CMAKE_SOURCE_DIR}/files)
 
 # Specify the destination directory (e.g., the path folder in the build directory)
-set(DESTINATION_DIR ${CMAKE_CURRENT_BINARY_DIR}/files)
+set(DESTINATION_DIR ${CMAKE_CURRENT_BINARY_DIR})
 
 # Create the destination directory if it doesn't exist
 file(MAKE_DIRECTORY ${DESTINATION_DIR})
 
-# Copy the file to the destination directory
-file(COPY ${SOURCE_FILES} DESTINATION ${DESTINATION_DIR})
+# Copy the entire folder to the destination directory
+file(COPY ${SOURCE_DIR} DESTINATION ${DESTINATION_DIR})
 
-message(STATUS "Source files: ${SOURCE_FILES}")
+message(STATUS "Source directory: ${SOURCE_DIR}")
 # COPY FILES END
 
 # Add the executable
