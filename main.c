@@ -91,6 +91,7 @@ int main() {
     // Set up server address
     server_addr.sin_family = AF_INET;
     server_addr.sin_addr.s_addr = INADDR_ANY;
+    // inet_pton(AF_INET, "192.168.1.100", &server_addr.sin_addr); // Bind to specific IP
     server_addr.sin_port = htons(PORT);
 
     // Bind socket
