@@ -1,0 +1,16 @@
+@API_HostAddress = http://localhost:8080
+
+### Get txt
+Get {{API_HostAddress}}/file1.txt HTTP/1.1
+Accept: text/plain
+Content-Type: text/plain
+
+### Get html
+Get {{API_HostAddress}}/file2.html HTTP/1.1
+Accept: text/html
+Content-Type: text/html
+
+### Get json
+Get {{API_HostAddress}}/file3.json HTTP/1.1
+Accept: application/json
+Content-Type: application/json

@@ -1,0 +1,8 @@
+/build
+build
+
+.vscode
+/,vscode
+
+build-conan
+/build-conan
